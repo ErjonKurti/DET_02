@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form V2.1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/toastify-js@1.9.3/dist/Toastify.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.9.3/dist/Toastify.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Form App</h1>
+        <form id="dataForm" method="POST">
+
+            <div class="input-group row">
+                <div class="input-item">
+                    <label for="firstName">Emri</label>
+                    <input type="text" id="firstName" name="firstName">
+                    <div id="firstNameError" class="error-message"></div>
+                </div>
+                <div class="input-item">
+                    <label for="lastName">Mbiemri</label>
+                    <input type="text" id="lastName" name="lastName">
+                    <div id="lastNameError" class="error-message"></div>
+                </div>
+            </div>
+
+            <div class="input-group row">
+                <div class="input-item">
+                    <label for="city">Qyteti</label>
+                    <input type="text" id="city" name="city">
+                    <div id="cityError" class="error-message"></div>
+                </div>
+                <div class="input-item">
+                    <label for="address">Adresa</label>
+                    <input type="text" id="address" name="address">
+                    <div id="addressError" class="error-message"></div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" id="saveBtn" >Ruaj</button>
+                <button type="button" id="cancelBtn" onclick="document.getElementById('dataForm').reset(); showToast('success', 'Të dhënat u anullluan me sukses.');">Anullo</button>
+            </div>
+
+            <div id="messageBox" class="message-box"></div>
+        </form>
+    </div>
+
+</body>
+</html>
